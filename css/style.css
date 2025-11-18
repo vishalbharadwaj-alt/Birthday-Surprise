@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.birthday-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px;
+}
+
+.birthday-message h1 {
+    color: #ff6b6b;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.special-message {
+    font-size: 1.5em;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+}
+
+.memory-gallery {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+}
+
+.photo-placeholder {
+    padding: 100px 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    color: #666;
+}
+
+.glow-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background: linear-gradient(45deg, #ff6b6b, #ffc3a0);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.glow-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+}
+
+.birthday-wishes {
+    margin-top: 40px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.birthday-wishes.visible {
+    opacity: 1;
+}
+
+.birthday-wishes .dear {
+    font-size: 1.5em;
+    color: #ff6b6b;
+    margin-bottom: 30px;
+    font-family: 'Arial', cursive;
+}
+
+.heartfelt-message {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #4a4a4a;
+}
+
+.heartfelt-message p {
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+.signature {
+    text-align: right;
+    font-style: italic;
+    color: #ff6b6b;
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Animation classes */
+.float {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .birthday-card {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .birthday-message h1 {
+        font-size: 2em;
+    }
+
+    .special-message {
+        font-size: 1.2em;
+    }
+}

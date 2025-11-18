@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎂</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cake.css">
+    <link rel="stylesheet" href="css/heart-animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="birthday-card animate__animated animate__fadeIn">
+            <div class="birthday-message">
+                <h1 class="animate__animated animate__bounceIn">Happy Birthday Khritu! 🎉</h1>
+                <p class="special-message animate__animated animate__fadeInUp">To someone who makes my world brighter just by being in it...</p>
+            </div>
+            
+            <div class="cake-container" id="cake">
+                <div class="cake">
+                    <div class="cake-half left">
+                        <div class="flame"></div>
+                        <div class="candle"></div>
+                        <div class="cake-top"></div>
+                        <div class="cream-layer cream-top"></div>
+                        <div class="cake-middle"></div>
+                        <div class="cream-layer cream-middle"></div>
+                        <div class="cake-base"></div>
+                        <div class="cream-layer cream-base"></div>
+                        <!-- Cherries for left half -->
+                        <div class="cherry" style="top: -15px; left: 30px">
+                            <div class="cherry-stem"></div>
+                        </div>
+                        <div class="cherry" style="top: -15px; left: 60px">
+                            <div class="cherry-stem"></div>
+                        </div>
+                        <!-- Chocolate drips for left half -->
+                        <div class="chocolate-drip" style="top: -15px; left: 15px"></div>
+                        <div class="chocolate-drip" style="top: -15px; left: 45px"></div>
+                        <!-- Chocolate shavings for left half -->
+                        <div class="chocolate-shaving" style="top: 10px; left: 20px"></div>
+                        <div class="chocolate-shaving" style="top: 30px; left: 50px"></div>
+                    </div>
+                    <div class="cake-half right">
+                        <div class="cake-top"></div>
+                        <div class="cream-layer cream-top"></div>
+                        <div class="cake-middle"></div>
+                        <div class="cream-layer cream-middle"></div>
+                        <div class="cake-base"></div>
+                        <div class="cream-layer cream-base"></div>
+                        <!-- Cherries for right half -->
+                        <div class="cherry" style="top: -15px; right: 30px">
+                            <div class="cherry-stem"></div>
+                        </div>
+                        <div class="cherry" style="top: -15px; right: 60px">
+                            <div class="cherry-stem"></div>
+                        </div>
+                        <!-- Chocolate drips for right half -->
+                        <div class="chocolate-drip" style="top: -15px; right: 15px"></div>
+                        <div class="chocolate-drip" style="top: -15px; right: 45px"></div>
+                        <!-- Chocolate shavings for right half -->
+                        <div class="chocolate-shaving" style="top: 15px; right: 25px"></div>
+                        <div class="chocolate-shaving" style="top: 35px; right: 55px"></div>
+                    </div>
+                </div>
+                <div class="heart-reveal">
+                    <div class="heart">
+                        <span class="heart-text">Dr Khritistha Thakuria</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="memories-section animate__animated animate__fadeInUp">
+                <h2>Memories</h2>
+                <p class="memories-message">Eager to make so many more memories with you, each one more special than the last. Here's to all the laughter, adventures, and moments yet to come!</p>
+                <div class="memories-gallery">
+                    <div class="photo-placeholder">
+                        <p>Your special memories will appear here...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="send-love-section animate__animated animate__fadeInUp">
+                <button id="sendLoveBtn" class="glow-button">Send More Love</button>
+                <button id="audioToggleBtn" class="glow-button">Play Song ▶️</button>
+                <div id="loveMessage" class="love-message"></div>
+            </div>
+
+            <div class="interactive-elements">
+                <button id="surpriseBtn" class="glow-button">Click for a Special Surprise</button>
+            </div>
+
+            <div class="birthday-wishes hidden" id="wishes">
+                <p class="dear">Dear Khritu,</p>
+                <div class="heartfelt-message">
+                    <p>Hey, I just wanted to wish you the happiest birthday ever. You truly deserve every bit of peace, laughter, and love this world can offer. You've always had this way of making life a little warmer, and I'm really grateful I got to know you.</p>
+                    <p>I don't want to say too much and make things heavy today — it's your day, and you should smile without a worry. Just know this: no matter where life takes us or how long it takes, I'll always be someone quietly rooting for you, wishing for your happiness, and waiting for the day when our paths might finally meet the same way.</p>
+                    <p>Enjoy your day to the fullest. You mean more than words can ever really say. 💫</p>
+                    <p class="signature">— Vishal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Background instrumental: place an MP3 at `assets/happy-birthday-instrumental.mp3` -->
+    <!-- 'controls' is added so users can manually start playback if autoplay is blocked. -->
+    <audio id="birthdayAudio" src="assets/happy-birthday-instrumental.mp3" preload="auto" loop controls></audio>
+    <script src="js/script.js"></script>
+</body>
+</html>

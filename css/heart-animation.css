@@ -1,0 +1,123 @@
+.heart-reveal {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.heart-reveal.visible {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+.heart {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    transform: rotate(-45deg) scale(0);
+    transform-origin: 50% 50%;
+    background: linear-gradient(135deg, #ff3366, #ff0066);
+    box-shadow: 0 0 40px rgba(255, 51, 102, 0.45);
+    animation: heartBeat 1.2s infinite;
+    opacity: 0;
+    transition: all 0.45s ease;
+    filter: drop-shadow(0 0 12px rgba(255, 51, 102, 0.25));
+}
+.heart.visible {
+    transform: rotate(-45deg) scale(1);
+    opacity: 1;
+}
+
+
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: inherit;
+    box-shadow: inherit;
+}
+
+.heart:before { top: -75px; left: 0; }
+.heart:after { left: 75px; top: 0; }
+
+.heart-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    font-family: 'Arial', cursive;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease 0.35s;
+    z-index: 2;
+}
+
+.heart.visible .heart-text {
+    opacity: 1;
+}
+
+/* Keep the text upright while the heart element is rotated */
+.heart-text { transform: rotate(45deg); }
+
+@keyframes heartBeat {
+    0% { transform: rotate(-45deg) scale(1); }
+    25% { transform: rotate(-45deg) scale(1.08); }
+    50% { transform: rotate(-45deg) scale(1); }
+    75% { transform: rotate(-45deg) scale(1.08); }
+    100% { transform: rotate(-45deg) scale(1); }
+}
+
+.cake-half {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+    transition: all 0.8s ease;
+}
+
+.cake-half.left {
+    left: 0;
+    transform-origin: right;
+}
+
+.cake-half.right {
+    right: 0;
+    transform-origin: left;
+}
+
+.cake.cut .cake-half.left {
+    transform: translateX(-100%) rotateY(20deg);
+}
+
+.cake.cut .cake-half.right {
+    transform: translateX(100%) rotateY(-20deg);
+}
+
+.sparkles {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ffeb3b;
+    animation: sparkle 1s linear infinite;
+}
+
+@keyframes sparkle {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+}
